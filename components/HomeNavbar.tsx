@@ -26,7 +26,7 @@ export default function HomeNavbar() {
             <Link className={getLinkClasses("/documentary")} href="#">Documentary</Link>
             <Link className={getLinkClasses("/events")} href="#">Events</Link>
             <Link className={getLinkClasses("/pitch")} href="#">Pitch Hub</Link>
-            <Link className={getLinkClasses("/community")} href="#">Community</Link>
+            <Link className={getLinkClasses("/community")} href="/community">Community</Link>
           </nav>
         </div>
         <div className="flex items-center gap-4">
