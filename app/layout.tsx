@@ -117,6 +117,15 @@ export default function RootLayout({
             body {
               min-height: max(884px, 100dvh);
             }
+            .hero-gradient {
+                background: linear-gradient(135deg, #003ec7 0%, #0052ff 100%);
+            }
+            .hero-text-gradient {
+                background: linear-gradient(135deg, #003ec7 0%, #0052ff 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
           `
         }}></style>
       </head>

@@ -1,29 +1,12 @@
 import Image from "next/image";
 
+import HomeNavbar from "../components/HomeNavbar";
+import HomeFooter from "../components/HomeFooter";
+
 export default function Home() {
   return (
     <>
-      <header className="bg-[#faf8ff] dark:bg-slate-950 docked w-full top-0 sticky z-50">
-        <div className="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-          <div className="flex items-center gap-8">
-            <span className="font-['Manrope'] font-black tracking-[-0.02em] text-[#003ec7] dark:text-[#0052FF] text-2xl">Legit.cm</span>
-            <nav className="hidden md:flex items-center gap-6">
-              <a className="text-[#003ec7] dark:text-[#0052FF] font-bold border-b-2 border-[#003ec7] py-1 font-['Inter'] text-sm scale-100 active:scale-95 transition-transform" href="#">Home</a>
-              <a className="text-[#131b2e] dark:text-slate-300 font-medium hover:bg-[#eaedff] dark:hover:bg-slate-800 px-3 py-1 rounded transition-colors duration-300 font-['Inter'] text-sm scale-100 active:scale-95 transition-transform" href="#">About Us</a>
-              <a className="text-[#131b2e] dark:text-slate-300 font-medium hover:bg-[#eaedff] dark:hover:bg-slate-800 px-3 py-1 rounded transition-colors duration-300 font-['Inter'] text-sm scale-100 active:scale-95 transition-transform" href="#">Documentary</a>
-              <a className="text-[#131b2e] dark:text-slate-300 font-medium hover:bg-[#eaedff] dark:hover:bg-slate-800 px-3 py-1 rounded transition-colors duration-300 font-['Inter'] text-sm scale-100 active:scale-95 transition-transform" href="#">Events</a>
-              <a className="text-[#131b2e] dark:text-slate-300 font-medium hover:bg-[#eaedff] dark:hover:bg-slate-800 px-3 py-1 rounded transition-colors duration-300 font-['Inter'] text-sm scale-100 active:scale-95 transition-transform" href="#">Pitch Hub</a>
-              <a className="text-[#131b2e] dark:text-slate-300 font-medium hover:bg-[#eaedff] dark:hover:bg-slate-800 px-3 py-1 rounded transition-colors duration-300 font-['Inter'] text-sm scale-100 active:scale-95 transition-transform" href="#">Community</a>
-            </nav>
-          </div>
-          <div className="flex items-center gap-4">
-            <button className="md:hidden p-2 text-[#003ec7]">
-              <span className="material-symbols-outlined">menu</span>
-            </button>
-            <button className="hidden md:block px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm hover:opacity-90 transition-all scale-100 active:scale-95">Get Started</button>
-          </div>
-        </div>
-      </header>
+      <HomeNavbar />
       <main className="min-h-screen bg-surface">
         <section className="px-6 md:px-12 py-16 md:py-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
@@ -33,13 +16,13 @@ export default function Home() {
             <span className="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6">Incubating the Future</span>
             <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1] text-on-surface">
               Build, Connect, <br/>
-              <span className="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">Launch</span>
+              <span className="hero-text-gradient">Launch</span>
             </h1>
             <p className="text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
               Legit.cm is the premier ecosystem for African innovators. We provide the mentorship, capital, and community you need to turn your ambitious vision into a world-class startup.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+              <button className="px-8 py-4 hero-gradient text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
                 Join Event
               </button>
               <button className="px-8 py-4 bg-surface-container-high text-primary rounded-full font-bold hover:bg-surface-container-highest transition-colors">
@@ -272,30 +255,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-[#f2f3ff] dark:bg-slate-900 w-full py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-6">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <span className="font-['Manrope'] font-extrabold text-[#131b2e] dark:text-white text-2xl">Legit.cm</span>
-            <p className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 opacity-100 hover:opacity-80 transition-opacity">© 2024 Legit.cm Inc. Precision in Incubation.</p>
-          </div>
-          <nav className="flex flex-wrap justify-center gap-8">
-            <a className="font-['Inter'] text-sm tracking-wide text-[#003ec7] font-semibold hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Home</a>
-            <a className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Events</a>
-            <a className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Community</a>
-            <a className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Pitch</a>
-            <a className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Privacy</a>
-            <a className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Terms</a>
-          </nav>
-          <div className="flex gap-4">
-            <button className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-fixed transition-colors">
-              <span className="material-symbols-outlined text-lg">public</span>
-            </button>
-            <button className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-fixed transition-colors">
-              <span className="material-symbols-outlined text-lg">alternate_email</span>
-            </button>
-          </div>
-        </div>
-      </footer>
+      <HomeFooter />
     </>
   );
 }
