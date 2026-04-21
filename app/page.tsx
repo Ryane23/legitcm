@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimatedCtaSlider from "../components/AnimatedCtaSlider";
 
 import HomeNavbar from "../components/HomeNavbar";
 import HomeFooter from "../components/HomeFooter";
@@ -285,21 +286,9 @@ export default function Home() {
 </section>
 {/**/}
 <section className="px-6 md:px-12 py-24">
-<div className="max-w-7xl mx-auto">
-<div className="bg-primary-container rounded-xl p-12 md:p-20 text-center relative overflow-hidden">
-<div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-<div className="absolute top-[-50%] left-[-20%] w-[800px] h-[800px] bg-white rounded-full blur-[150px]"></div>
-</div>
-<h2 className="text-4xl md:text-6xl font-extrabold text-white mb-8 relative z-10">Join the next generation <br/> of founders.</h2>
-<p className="text-on-primary-container max-w-2xl mx-auto mb-12 text-lg relative z-10 leading-relaxed">
-                        The window for our Q1 2025 cohort is closing. Secure your mentorship track and resource access today.
-                    </p>
-<div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-<button className="px-10 py-5 bg-white text-primary rounded-full font-bold shadow-xl hover:scale-105 transition-transform">Get Started Today</button>
-<button className="px-10 py-5 bg-primary border border-white/20 text-white rounded-full font-bold hover:bg-white/10 transition-colors">Talk to an Advisor</button>
-</div>
-</div>
-</div>
+  <div className="max-w-7xl mx-auto">
+    <AnimatedCtaSlider />
+  </div>
 </section>
 </main>
 
