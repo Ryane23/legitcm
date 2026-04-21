@@ -19,13 +19,13 @@ export default function Home() {
 <span className="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6">Incubating the Future</span>
 <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1] text-on-surface">
                         Build, Connect, <br className="hidden md:block"/>
-<span className="text-[#003ec7]">Launch</span>
+<span className="hero-text-gradient">Launch</span>
 </h1>
 <p className="text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
                         Nile is the premier ecosystem for African innovators. We provide the mentorship, capital, and community you need to turn your ambitious vision into a world-class startup.
                     </p>
 <div className="flex flex-wrap gap-4">
-<button className="px-8 py-4 bg-[#003ec7] text-white rounded-full font-bold shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform">
+<button className="px-8 py-4 hero-gradient text-white rounded-full font-bold shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform">
                             Join Event
                         </button>
 <button className="px-8 py-4 bg-surface-container-high text-primary rounded-full font-bold hover:bg-surface-container-highest transition-colors">
