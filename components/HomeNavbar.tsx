@@ -24,8 +24,8 @@ export default function HomeNavbar() {
             <Link className={getLinkClasses("/")} href="/">Home</Link>
             <Link className={getLinkClasses("/about")} href="/about">About Us</Link>
             <Link className={getLinkClasses("/documentary")} href="#">Documentary</Link>
-            <Link className={getLinkClasses("/events")} href="#">Events</Link>
-            <Link className={getLinkClasses("/pitch")} href="#">Pitch Hub</Link>
+            <Link className={getLinkClasses("/events")} href="/events">Events</Link>
+            <Link className={getLinkClasses("/pitch")} href="/pitch">Pitch Hub</Link>
             <Link className={getLinkClasses("/community")} href="/community">Community</Link>
           </nav>
         </div>
