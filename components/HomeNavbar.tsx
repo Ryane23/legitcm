@@ -23,7 +23,7 @@ export default function HomeNavbar() {
           <nav className="hidden md:flex items-center gap-6">
             <Link className={getLinkClasses("/")} href="/">Home</Link>
             <Link className={getLinkClasses("/about")} href="/about">About Us</Link>
-            <Link className={getLinkClasses("/documentary")} href="#">Documentary</Link>
+            <Link className={getLinkClasses("/documentary")} href="/documentary">Documentary</Link>
             <Link className={getLinkClasses("/events")} href="/events">Events</Link>
             <Link className={getLinkClasses("/pitch")} href="/pitch">Pitch Hub</Link>
             <Link className={getLinkClasses("/community")} href="/community">Community</Link>

@@ -16,7 +16,7 @@ const slides = [
     poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
     alt: "Startup team brainstorming",
     heading: "Build, Connect, Launch.",
-    desc: "Nile is the premier ecosystem for African innovators. We provide mentorship, capital, and community."
+    desc: "Legit is the premier ecosystem for African innovators. We provide mentorship, capital, and community."
   },
   {
     type: "image",

@@ -23,7 +23,7 @@ export default function Home() {
 <span className="hero-text-gradient">Launch</span>
 </h1>
 <p className="text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
-                        Nile is the premier ecosystem for African innovators. We provide the mentorship, capital, and community you need to turn your ambitious vision into a world-class startup.
+                        Legit is the premier ecosystem for African innovators. We provide the mentorship, capital, and community you need to turn your ambitious vision into a world-class startup.
                     </p>
 <div className="flex flex-wrap gap-4">
 <button className="px-8 py-4 hero-gradient text-white rounded-full font-bold shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform">
@@ -104,7 +104,7 @@ export default function Home() {
 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-primary">DEC 14</div>
 </div>
 <div className="p-6">
-<h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Nile Demo Day 2024</h3>
+<h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Legit Demo Day 2024</h3>
 <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">The premier showcase for the next generation of African unicorns. Join 500+ investors and industry leaders.</p>
 <button className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all">Register Now</button>
 </div>
@@ -140,7 +140,7 @@ export default function Home() {
 <section className="px-6 md:px-12 py-24 flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto">
 <div className="lg:w-1/3">
 <span className="text-primary font-bold tracking-widest text-xs uppercase block mb-4">Our Ecosystem in Action</span>
-<h2 className="text-4xl font-extrabold tracking-tight mb-6">Launch your dream with Nile Hub.</h2>
+<h2 className="text-4xl font-extrabold tracking-tight mb-6">Launch your dream with Legit Hub.</h2>
 <p className="text-on-surface-variant mb-8 leading-relaxed">
                     We're not just a workspace. We're a launchpad providing strategic advisory, technical support, and direct access to seed funding for high-potential ventures.
                 </p>
@@ -170,10 +170,10 @@ export default function Home() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
 {/**/}
 <a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
-<img alt="Nile Retail" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHytl3s6TzmtBnuLN8OiFv3YAVWzCPgLYUMxdyS0URnHNaU3l1nJAoqOhdBrMgcc2Xt2qp0BNT7tMv2wz5YXF3MHnDWbmUj_fhS83q__g4_zb2JWJZSAmKvOr1XPJjUJDMC0igAuGaH32Mg9qWTw8nWgM3dRzmO2yFGQ1FWP3QUeVeem8U9thnw72-T1Nc360wjK4D3I__o2A1vm-ymFdvhjz51-28po2oco_sRCw7I4kP_3e3cAgn_rRdSWIUN6gBSfQ6cRigD7c"/>
+<img alt="Legit Retail" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHytl3s6TzmtBnuLN8OiFv3YAVWzCPgLYUMxdyS0URnHNaU3l1nJAoqOhdBrMgcc2Xt2qp0BNT7tMv2wz5YXF3MHnDWbmUj_fhS83q__g4_zb2JWJZSAmKvOr1XPJjUJDMC0igAuGaH32Mg9qWTw8nWgM3dRzmO2yFGQ1FWP3QUeVeem8U9thnw72-T1Nc360wjK4D3I__o2A1vm-ymFdvhjz51-28po2oco_sRCw7I4kP_3e3cAgn_rRdSWIUN6gBSfQ6cRigD7c"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
-<h3 className="text-xl font-bold text-white mb-2">Nile Retail</h3>
+<h3 className="text-xl font-bold text-white mb-2">Legit Retail</h3>
 <div className="flex items-center gap-2 text-white/90 text-sm font-semibold">
                                 Learn more
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -182,10 +182,10 @@ export default function Home() {
 </a>
 {/**/}
 <a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
-<img alt="NilePay" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7KqOSpe3EFoHxxYHWgUtZuJskicUozwnshM4UGd-Osd8R7ZE8RkRaiVkcs6YH4BaExz2tvwS2EPh69tkvIEoRobozERwfeflLYgy_CvtbH9OVv93Mu6Q5jcJWMYVJgzi-OPSpo5y7qS8KfxDX2ETsW35j2Fk44S1dYCirmh3AKHmasQstCB2naiEqDRQjSAZ4cJL2m9Kfcs_DCqetO2KA6lFR3qUV5n5NQhCBvIja65X8f61eJPOPoTl_gQ_LVa9Kaxi0C6SC_g"/>
+<img alt="LegitPay" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7KqOSpe3EFoHxxYHWgUtZuJskicUozwnshM4UGd-Osd8R7ZE8RkRaiVkcs6YH4BaExz2tvwS2EPh69tkvIEoRobozERwfeflLYgy_CvtbH9OVv93Mu6Q5jcJWMYVJgzi-OPSpo5y7qS8KfxDX2ETsW35j2Fk44S1dYCirmh3AKHmasQstCB2naiEqDRQjSAZ4cJL2m9Kfcs_DCqetO2KA6lFR3qUV5n5NQhCBvIja65X8f61eJPOPoTl_gQ_LVa9Kaxi0C6SC_g"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
-<h3 className="text-xl font-bold text-white mb-2">NilePay</h3>
+<h3 className="text-xl font-bold text-white mb-2">LegitPay</h3>
 <div className="flex items-center gap-2 text-white/90 text-sm font-semibold">
                                 Learn more
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -206,10 +206,10 @@ export default function Home() {
 </a>
 {/**/}
 <a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
-<img alt="Nile For Startups" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbE7Tq1nSWz8VL-NsdYGQZiNiuY25L0j7V0IW0INcQf3-0O9dnVwy_w_3CYNltFy0RFc1-Iz-f6LDMDwwp9Gd3hkc1pV-R-rdEUOb-1oYfDh9TV2kc6Bcoou9P4Tu16nklxZcMHvyYUDoNVA8NpoNnKooh6n6whtW-12ZF2rObi_3wXGq0BACuyifj72s1ZuKv1ez8BvtNmkTCOzIYTV1AmoW7c-1lPGdf3pgwk_eLVi-8rVbPvEOIKDgC8PYJYTsHVpurtsIKqPs"/>
+<img alt="Legit For Startups" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbE7Tq1nSWz8VL-NsdYGQZiNiuY25L0j7V0IW0INcQf3-0O9dnVwy_w_3CYNltFy0RFc1-Iz-f6LDMDwwp9Gd3hkc1pV-R-rdEUOb-1oYfDh9TV2kc6Bcoou9P4Tu16nklxZcMHvyYUDoNVA8NpoNnKooh6n6whtW-12ZF2rObi_3wXGq0BACuyifj72s1ZuKv1ez8BvtNmkTCOzIYTV1AmoW7c-1lPGdf3pgwk_eLVi-8rVbPvEOIKDgC8PYJYTsHVpurtsIKqPs"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
-<h3 className="text-xl font-bold text-white mb-2">Nile For Startups</h3>
+<h3 className="text-xl font-bold text-white mb-2">Legit For Startups</h3>
 <div className="flex items-center gap-2 text-white/90 text-sm font-semibold">
                                 Learn more
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
