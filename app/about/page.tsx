@@ -28,9 +28,12 @@ export default function About() {
                 At Legit.cm, we don't just invest; we incubate with surgical precision. Our platform was born from the need to bridge the gap between African innovation and global scale through a curated, editorial approach to startup growth.
               </p>
               <div className="pt-4 flex gap-4">
-                <button className="hero-gradient text-on-primary px-8 py-4 rounded-full font-headline font-bold shadow-xl active:scale-95 transition-all">
+                <a
+                  className="hero-gradient text-on-primary px-8 py-4 rounded-full font-headline font-bold shadow-xl active:scale-95 transition-all inline-flex items-center justify-center"
+                  href="/contact"
+                >
                   Partner With Us
-                </button>
+                </a>
               </div>
             </div>
             <div className="flex-1 relative">
