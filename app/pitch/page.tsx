@@ -211,31 +211,6 @@ export default function PitchHub() {
       </main>
 
       <HomeFooter />
-      
-      {/* Mobile BottomNavBar (Platform specific rule from instructions) */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg px-6 py-3 flex justify-between items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
-        <a className="flex flex-col items-center gap-1 text-primary" href="#">
-          <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
-          <span className="text-[10px] font-bold">Home</span>
-        </a>
-        <a className="flex flex-col items-center gap-1 text-secondary hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined">explore</span>
-          <span className="text-[10px] font-medium">Explore</span>
-        </a>
-        <div className="relative -top-6">
-          <button className="w-14 h-14 bg-primary text-white rounded-full shadow-xl shadow-primary/40 flex items-center justify-center">
-            <span className="material-symbols-outlined text-3xl">add</span>
-          </button>
-        </div>
-        <a className="flex flex-col items-center gap-1 text-secondary hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined">analytics</span>
-          <span className="text-[10px] font-medium">Tracking</span>
-        </a>
-        <a className="flex flex-col items-center gap-1 text-secondary hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined">person</span>
-          <span className="text-[10px] font-medium">Profile</span>
-        </a>
-      </nav>
     </div>
   );
 }
