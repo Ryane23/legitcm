@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 
 export default function HeroAnimatedText() {
@@ -25,7 +26,7 @@ export default function HeroAnimatedText() {
         );
       if (paraRef.current) tl.from(paraRef.current, { y: 20, opacity: 0, duration: 0.6 }, "-=0.4");
       if (buttonsRef.current) {
-        const btns = Array.from(buttonsRef.current.querySelectorAll("button"));
+        const btns = Array.from(buttonsRef.current.querySelectorAll("a, button"));
         if (btns.length) tl.from(btns, { y: 20, opacity: 0, stagger: 0.12, duration: 0.45 }, "-=0.3");
       }
     }, rootRef);
@@ -34,7 +35,7 @@ export default function HeroAnimatedText() {
   }, []);
 
   return (
-    <div ref={rootRef} className="lg:w-1/2 text-left">
+    <div ref={rootRef} className="lg:w-1/2 text-center lg:text-left">
       <span
         ref={badgeRef}
         className="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6"
@@ -56,13 +57,19 @@ export default function HeroAnimatedText() {
         Legit is the premier ecosystem for African innovators. We provide the mentorship, capital, and community you need to turn your ambitious vision into a world-class startup.
       </p>
 
-      <div ref={buttonsRef} className="flex flex-wrap gap-4">
-        <button className="px-8 py-4 hero-gradient text-white rounded-full font-bold shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform">
+      <div ref={buttonsRef} className="flex flex-nowrap gap-4 justify-center lg:justify-start items-stretch">
+        <Link
+          href="/events"
+          className="min-w-[170px] h-14 px-8 hero-gradient text-white rounded-full font-bold shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform inline-flex items-center justify-center"
+        >
           Join Event
-        </button>
-        <button className="px-8 py-4 bg-surface-container-high text-primary rounded-full font-bold hover:bg-surface-container-highest transition-colors">
+        </Link>
+        <Link
+          href="/pitch"
+          className="min-w-[170px] h-14 px-8 bg-surface-container-high text-primary rounded-full font-bold hover:bg-surface-container-highest transition-colors inline-flex items-center justify-center"
+        >
           Apply to Pitch
-        </button>
+        </Link>
       </div>
     </div>
   );

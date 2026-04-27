@@ -8,14 +8,15 @@ export default function HeroPhone() {
   const screenRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    console.log("HeroPhone mounted");
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
       if (rootRef.current) {
         tl.from(rootRef.current, { y: 40, opacity: 0, scale: 0.98, duration: 0.8 });
-        tl.to(rootRef.current, { y: -10, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, "+=0.2");
+        tl.to(rootRef.current, { y: -18, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, "+=0.2");
       }
       if (screenRef.current) {
-        gsap.to(screenRef.current, { scale: 1.02, duration: 3.2, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        gsap.to(screenRef.current, { scale: 1.04, duration: 2.8, repeat: -1, yoyo: true, ease: "sine.inOut" });
       }
     }, rootRef);
 

@@ -17,7 +17,7 @@ export default function Home() {
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
 <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary rounded-full blur-[120px]"></div>
 </div>
-<div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
         <HeroAnimatedText />
 {/**/}
 <div className="lg:w-1/2 flex justify-center w-full mt-10 lg:mt-0">

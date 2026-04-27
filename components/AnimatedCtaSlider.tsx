@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 const slides = [
   {
     type: "video",
-    src: "/app/video%20/130646-747868367_medium.mp4",
+    src: "/videos/130646-747868367_medium.mp4",
     poster: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
     alt: "Founders working together",
     heading: "Join the next generation <br /> of founders.",
@@ -12,7 +12,7 @@ const slides = [
   },
   {
     type: "video",
-    src: "/app/video%20/92480-637690589_medium.mp4",
+    src: "/videos/92480-637690589_medium.mp4",
     poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
     alt: "Startup team brainstorming",
     heading: "Build, Connect, Launch.",
