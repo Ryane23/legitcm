@@ -17,6 +17,15 @@ export default function HomeNavbar() {
     return `${baseClasses} text-[#131b2e] dark:text-slate-300 font-medium hover:bg-[#eaedff] dark:hover:bg-slate-800 px-3 py-1 rounded transition-colors duration-300`;
   };
 
+  const getMobileLinkClasses = (path: string) => {
+    const isActive = pathname === path;
+    const baseClasses = "flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 outline-none";
+    if (isActive) {
+      return `${baseClasses} text-[#003ec7] bg-[#e6ecff] dark:text-[#0052FF] dark:bg-slate-800/80 shadow-sm`;
+    }
+    return `${baseClasses} text-[#131b2e] dark:text-slate-200 hover:bg-[#f1f4ff] dark:hover:bg-slate-800/60`;
+  };
+
   return (
     <header className="bg-[#faf8ff] dark:bg-slate-950 docked w-full top-0 sticky z-50 relative">
       <div className="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
@@ -41,18 +50,41 @@ export default function HomeNavbar() {
           >
             <span className="material-symbols-outlined">{isMobileMenuOpen ? "close" : "menu"}</span>
           </button>
-          <button className="hidden md:block px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm hover:opacity-90 transition-all scale-100 active:scale-95">Get Started</button>
+          <Link
+            className="hidden md:block px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm hover:opacity-90 transition-all scale-100 active:scale-95"
+            href="/pitch"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
       {isMobileMenuOpen && (
-        <nav className="md:hidden absolute left-0 right-0 top-full px-6 pb-4 pt-2 border-t border-outline-variant/40 bg-[#faf8ff] shadow-[0_10px_30px_rgba(19,27,46,0.08)]">
-          <div className="flex flex-col gap-1">
-            <Link className={getLinkClasses("/")} href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-            <Link className={getLinkClasses("/about")} href="/about" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-            <Link className={getLinkClasses("/documentary")} href="/documentary" onClick={() => setIsMobileMenuOpen(false)}>Documentary</Link>
-            <Link className={getLinkClasses("/events")} href="/events" onClick={() => setIsMobileMenuOpen(false)}>Events</Link>
-            <Link className={getLinkClasses("/pitch")} href="/pitch" onClick={() => setIsMobileMenuOpen(false)}>Pitch Hub</Link>
-            <Link className={getLinkClasses("/community")} href="/community" onClick={() => setIsMobileMenuOpen(false)}>Community</Link>
+        <nav className="md:hidden absolute left-4 right-4 top-full mt-3 rounded-2xl border border-outline-variant/40 bg-[#faf8ff] p-3 shadow-[0_16px_40px_rgba(19,27,46,0.12)]">
+          <div className="flex flex-col gap-2">
+            <Link className={getMobileLinkClasses("/")} href="/" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>Home</span>
+              <span className="material-symbols-outlined text-base">home</span>
+            </Link>
+            <Link className={getMobileLinkClasses("/about")} href="/about" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>About Us</span>
+              <span className="material-symbols-outlined text-base">info</span>
+            </Link>
+            <Link className={getMobileLinkClasses("/documentary")} href="/documentary" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>Documentary</span>
+              <span className="material-symbols-outlined text-base">movie</span>
+            </Link>
+            <Link className={getMobileLinkClasses("/events")} href="/events" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>Events</span>
+              <span className="material-symbols-outlined text-base">event</span>
+            </Link>
+            <Link className={getMobileLinkClasses("/pitch")} href="/pitch" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>Pitch Hub</span>
+              <span className="material-symbols-outlined text-base">rocket_launch</span>
+            </Link>
+            <Link className={getMobileLinkClasses("/community")} href="/community" onClick={() => setIsMobileMenuOpen(false)}>
+              <span>Community</span>
+              <span className="material-symbols-outlined text-base">people</span>
+            </Link>
           </div>
         </nav>
       )}

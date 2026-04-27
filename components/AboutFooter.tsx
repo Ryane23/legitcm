@@ -12,10 +12,10 @@ export default function AboutFooter() {
         </div>
 
         <nav className="grid grid-cols-2 gap-x-8 gap-y-3 text-center sm:flex sm:flex-wrap sm:justify-center md:gap-8">
-          <Link className="font-['Inter'] text-sm tracking-wide text-[#0052ff] font-semibold hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">Our Vision</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-[#131b2e]/70 dark:text-[#faf8ff]/70 hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">The Community</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-[#131b2e]/70 dark:text-[#faf8ff]/70 hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">Documentary</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-[#131b2e]/70 dark:text-[#faf8ff]/70 hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">Privacy</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-[#0052ff] font-semibold hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="/about">Our Vision</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-[#131b2e]/70 dark:text-[#faf8ff]/70 hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="/community">The Community</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-[#131b2e]/70 dark:text-[#faf8ff]/70 hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="/documentary">Documentary</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-[#131b2e]/70 dark:text-[#faf8ff]/70 hover:underline decoration-2 underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="/privacy">Privacy</Link>
         </nav>
       </div>
     </footer>

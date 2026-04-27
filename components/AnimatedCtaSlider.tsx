@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const slides = [
   {
@@ -78,8 +79,12 @@ export default function AnimatedCtaSlider() {
           {slide.desc}
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="px-10 py-5 bg-white text-primary rounded-full font-bold shadow-xl hover:scale-105 transition-transform">Get Started Today</button>
-          <button className="px-10 py-5 bg-primary border border-white/20 text-white rounded-full font-bold hover:bg-white/10 transition-colors">Talk to an Advisor</button>
+          <Link className="px-10 py-5 bg-white text-primary rounded-full font-bold shadow-xl hover:scale-105 transition-transform" href="/pitch">
+            Get Started Today
+          </Link>
+          <Link className="px-10 py-5 bg-primary border border-white/20 text-white rounded-full font-bold hover:bg-white/10 transition-colors" href="/community">
+            Talk to an Advisor
+          </Link>
         </div>
       </div>
       {/* Slide Indicators */}

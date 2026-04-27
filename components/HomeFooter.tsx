@@ -12,12 +12,12 @@ export default function HomeFooter() {
         </div>
 
         <nav className="grid grid-cols-2 gap-x-8 gap-y-3 text-center sm:flex sm:flex-wrap sm:justify-center md:gap-8">
-          <Link className="font-['Inter'] text-sm tracking-wide text-[#003ec7] font-semibold hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Home</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Events</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Community</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Pitch</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Privacy</Link>
-          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="#">Terms</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-[#003ec7] font-semibold hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="/">Home</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="/events">Events</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="/community">Community</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="/pitch">Pitch</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="/privacy">Privacy</Link>
+          <Link className="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#0052FF] underline-offset-4 hover:underline transition-all" href="/terms">Terms</Link>
         </nav>
 
         <div className="flex items-center justify-center gap-4 md:justify-end">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import AnimatedCtaSlider from "../components/AnimatedCtaSlider";
 
 import HomeNavbar from "../components/HomeNavbar";
@@ -53,10 +54,10 @@ export default function Home() {
 <h2 className="text-3xl font-extrabold tracking-tight mb-2">Upcoming Events</h2>
 <p className="text-on-surface-variant">Secure your spot at our next high-impact gathering.</p>
 </div>
-<button className="text-primary font-bold flex items-center gap-2 group">
+<Link className="text-primary font-bold flex items-center gap-2 group" href="/events">
                         View Calendar
                         <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
+</Link>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 {/**/}
@@ -68,7 +69,7 @@ export default function Home() {
 <div className="p-6">
 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Legit Demo Day 2024</h3>
 <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">The premier showcase for the next generation of African unicorns. Join 500+ investors and industry leaders.</p>
-<button className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all">Register Now</button>
+<Link className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all inline-flex items-center justify-center" href="/events">Register Now</Link>
 </div>
 </div>
 {/**/}
@@ -80,7 +81,7 @@ export default function Home() {
 <div className="p-6">
 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Founders' Mixer: AI Edition</h3>
 <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">An exclusive networking evening for founders exploring the frontiers of artificial intelligence in emerging markets.</p>
-<button className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all">Request Invite</button>
+<Link className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all inline-flex items-center justify-center" href="/events">Request Invite</Link>
 </div>
 </div>
 {/**/}
@@ -92,7 +93,7 @@ export default function Home() {
 <div className="p-6">
 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Scale-Up Workshop</h3>
 <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">Hands-on session with Series B founders on operations, talent acquisition, and market expansion strategies.</p>
-<button className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all">Secure Seat</button>
+<Link className="w-full py-3 bg-surface-container text-primary rounded-full font-bold group-hover:bg-primary group-hover:text-white transition-all inline-flex items-center justify-center" href="/events">Secure Seat</Link>
 </div>
 </div>
 </div>
@@ -126,12 +127,12 @@ export default function Home() {
 </div>
 </div>
 </div>
-<button className="px-10 py-4 bg-primary text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">Apply to Pitch</button>
+<Link className="px-10 py-4 bg-primary text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity inline-flex items-center justify-center" href="/pitch">Apply to Pitch</Link>
 </div>
 <div className="lg:w-2/3">
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
 {/**/}
-<a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
+<Link className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="/community">
 <img alt="Legit Retail" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHytl3s6TzmtBnuLN8OiFv3YAVWzCPgLYUMxdyS0URnHNaU3l1nJAoqOhdBrMgcc2Xt2qp0BNT7tMv2wz5YXF3MHnDWbmUj_fhS83q__g4_zb2JWJZSAmKvOr1XPJjUJDMC0igAuGaH32Mg9qWTw8nWgM3dRzmO2yFGQ1FWP3QUeVeem8U9thnw72-T1Nc360wjK4D3I__o2A1vm-ymFdvhjz51-28po2oco_sRCw7I4kP_3e3cAgn_rRdSWIUN6gBSfQ6cRigD7c"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
@@ -141,9 +142,9 @@ export default function Home() {
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
 </div>
-</a>
+</Link>
 {/**/}
-<a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
+<Link className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="/community">
 <img alt="LegitPay" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7KqOSpe3EFoHxxYHWgUtZuJskicUozwnshM4UGd-Osd8R7ZE8RkRaiVkcs6YH4BaExz2tvwS2EPh69tkvIEoRobozERwfeflLYgy_CvtbH9OVv93Mu6Q5jcJWMYVJgzi-OPSpo5y7qS8KfxDX2ETsW35j2Fk44S1dYCirmh3AKHmasQstCB2naiEqDRQjSAZ4cJL2m9Kfcs_DCqetO2KA6lFR3qUV5n5NQhCBvIja65X8f61eJPOPoTl_gQ_LVa9Kaxi0C6SC_g"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
@@ -153,9 +154,9 @@ export default function Home() {
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
 </div>
-</a>
+</Link>
 {/**/}
-<a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
+<Link className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="/community">
 <img alt="Shipco" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ5EPJjl_WpOMWv6wvGT2QghBKrd8YcAN6MG-US3IQjuClTzYNzXKiIAB4fx0UYhKSnP0cUQu4vD6SbOLt9vofzOBzQdrAANJ8egjOG923Pe6B-L_5SQmpFotL7cNpYVxfVebpieU6Vu94fAI4bT1KtxpmRH63BOSOdZ2ONHzKRwLMEjWX2R5APUOE5faxah-W4r2Ci7aZEpeP-OoC43UQzaWgfmEAXAwZ2Q7A-5raH4o6yQ66Pm4or5A2Wir8Dx1WV9YKPjOsQCk"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
@@ -165,9 +166,9 @@ export default function Home() {
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
 </div>
-</a>
+</Link>
 {/**/}
-<a className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="#">
+<Link className="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 min-h-[240px] flex flex-col justify-end" href="/community">
 <img alt="Legit For Startups" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbE7Tq1nSWz8VL-NsdYGQZiNiuY25L0j7V0IW0INcQf3-0O9dnVwy_w_3CYNltFy0RFc1-Iz-f6LDMDwwp9Gd3hkc1pV-R-rdEUOb-1oYfDh9TV2kc6Bcoou9P4Tu16nklxZcMHvyYUDoNVA8NpoNnKooh6n6whtW-12ZF2rObi_3wXGq0BACuyifj72s1ZuKv1ez8BvtNmkTCOzIYTV1AmoW7c-1lPGdf3pgwk_eLVi-8rVbPvEOIKDgC8PYJYTsHVpurtsIKqPs"/>
 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
 <div className="relative p-6 z-10">
@@ -177,7 +178,7 @@ export default function Home() {
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
 </div>
-</a>
+</Link>
 </div>
 </div>
 </section>
@@ -193,8 +194,8 @@ export default function Home() {
 <h4 className="font-bold text-lg">Amara Okafor</h4>
 <p className="text-sm text-primary mb-2">CEO, AgriFlow</p>
 <div className="flex justify-center gap-3">
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">link</span>
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">share</span>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Visit founder profile">link</Link>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Share founder profile">share</Link>
 </div>
 </div>
 <div className="text-center group">
@@ -205,8 +206,8 @@ export default function Home() {
 <h4 className="font-bold text-lg">David Mensah</h4>
 <p className="text-sm text-primary mb-2">CTO, HealthEase</p>
 <div className="flex justify-center gap-3">
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">link</span>
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">share</span>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Visit founder profile">link</Link>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Share founder profile">share</Link>
 </div>
 </div>
 <div className="text-center group">
@@ -217,8 +218,8 @@ export default function Home() {
 <h4 className="font-bold text-lg">Fatima Bello</h4>
 <p className="text-sm text-primary mb-2">Founder, EduSpark</p>
 <div className="flex justify-center gap-3">
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">link</span>
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">share</span>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Visit founder profile">link</Link>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Share founder profile">share</Link>
 </div>
 </div>
 <div className="text-center group">
@@ -229,8 +230,8 @@ export default function Home() {
 <h4 className="font-bold text-lg">Kofi Appiah</h4>
 <p className="text-sm text-primary mb-2">COO, VoltMobility</p>
 <div className="flex justify-center gap-3">
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">link</span>
-<span className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm">share</span>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Visit founder profile">link</Link>
+<Link className="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-sm" href="/community" aria-label="Share founder profile">share</Link>
 </div>
 </div>
 </div>
