@@ -6,10 +6,47 @@ import HomeFooter from "../../components/HomeFooter";
 
 export default function Community() {
   const [reviewRating, setReviewRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
 
   return (
     <div className="bg-surface text-on-surface min-h-screen">
       <HomeNavbar />
+      <style jsx>{`
+        @keyframes heroFadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(14px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes heroGlow {
+          from {
+            opacity: 0.25;
+            transform: scale(0.98);
+          }
+          to {
+            opacity: 0.45;
+            transform: scale(1.02);
+          }
+        }
+        .hero-fade-1 {
+          animation: heroFadeUp 0.7s ease-out both;
+        }
+        .hero-fade-2 {
+          animation: heroFadeUp 0.7s ease-out both;
+          animation-delay: 0.08s;
+        }
+        .hero-fade-3 {
+          animation: heroFadeUp 0.7s ease-out both;
+          animation-delay: 0.16s;
+        }
+        .hero-glow {
+          animation: heroGlow 4s ease-in-out infinite alternate;
+        }
+      `}</style>
 
       <main className="pt-24 pb-32 max-w-7xl mx-auto px-6">
         <section className="mb-16">
@@ -21,9 +58,15 @@ export default function Community() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKuLHdfpS69lJnDT8YOTBZov631lRjbkO0qFDd4wqfWRM8t9fFr1RtEjhm8e8D3_clJE4rRrRt_sabmzYgYO4CiMeHi8w17SUlf-PdMzGHDXyPBvM_w4dpWhAL2t_7LiDiRTnigDjPYZv_s7oDk8e_E7pWoaHdkgkrOVcZB5dyU2ORf2qD5pLTu-t0fXZZEkZcsgiZvg0qlQ3Ww5tT-xB99ZI73tRMmpHMirjeLVZDJlMHOxBvU8XYzfP5DqkrMJAj4ZXwV0HcStw"
               />
             </div>
+            <div className="absolute -top-24 -right-16 h-64 w-64 rounded-full bg-white/20 blur-3xl hero-glow" />
             <div className="relative z-10 max-w-2xl">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">Ecosystem Hub</h1>
-              <p className="text-primary-fixed-dim text-lg md:text-xl font-medium leading-relaxed">
+              <p className="hero-fade-1 text-primary-fixed-dim text-xs font-bold uppercase tracking-[0.2em] mb-4">
+                Community Hub
+              </p>
+              <h1 className="hero-fade-2 text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">
+                Ecosystem Hub
+              </h1>
+              <p className="hero-fade-3 text-primary-fixed-dim text-lg md:text-xl font-medium leading-relaxed">
                 Stay updated with the pulse of our growing network. Connect with visionaries, share insights, and build the future of Nile together.
               </p>
             </div>
@@ -190,20 +233,27 @@ export default function Community() {
             <div className="bg-surface-container-lowest p-8 rounded-[2rem] shadow-xl shadow-primary/5">
               <h3 className="text-xl font-bold mb-6">Write a Review</h3>
               <div className="space-y-4">
-                <div className="flex gap-2 mb-4" role="radiogroup" aria-label="Rate the ecosystem">
+                <div
+                  className="flex gap-2 mb-4"
+                  role="radiogroup"
+                  aria-label="Rate the ecosystem"
+                  onMouseLeave={() => setHoverRating(0)}
+                >
                   {[1, 2, 3, 4, 5].map((value) => (
                     <button
                       key={value}
                       type="button"
                       className={`material-symbols-outlined cursor-pointer transition-colors ${
-                        reviewRating >= value ? "text-primary" : "text-primary-container"
+                        (hoverRating || reviewRating) >= value ? "text-primary" : "text-primary-container"
                       }`}
-                      style={{ fontVariationSettings: reviewRating >= value ? "'FILL' 1" : "'FILL' 0" }}
+                      style={{
+                        fontVariationSettings: (hoverRating || reviewRating) >= value ? "'FILL' 1" : "'FILL' 0"
+                      }}
                       aria-checked={reviewRating === value}
                       aria-label={`${value} star${value > 1 ? "s" : ""}`}
                       role="radio"
                       onClick={() => setReviewRating(value)}
-                      onMouseEnter={() => setReviewRating(value)}
+                      onMouseEnter={() => setHoverRating(value)}
                     >
                       star
                     </button>
