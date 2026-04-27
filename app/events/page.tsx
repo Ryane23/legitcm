@@ -5,9 +5,9 @@ export default function EventsPage() {
 	return (
 		<div className="scroll-smooth bg-[#faf8ff] text-[#131b2e] min-h-screen selection:bg-primary-container selection:text-white">
 			<HomeNavbar />
-			<main className="pt-2 overflow-x-hidden">
+			<main className="pt-0 overflow-x-hidden">
 				{/* SECTION 1: HERO */}
-				<section className="relative min-h-[618px] flex items-center px-6 md:px-12 overflow-hidden">
+				<section className="relative min-h-[618px] flex items-start pt-10 md:pt-14 px-6 md:px-12 overflow-hidden">
 					<div className="absolute inset-0 z-0">
 						<div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-10"></div>
 						<img className="w-full h-full object-cover opacity-40 scale-105" alt="hero" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV9EAu7CPACT4Tbh9_bDJMz5fitBYrvImHd3BQIPFLOwCyWnFaB6vIrC0LnMC7nV4EuguwijBBvg19-AWbklHEgvfA3ytPyL8HPtx47_Xhbu76LQPK3UfLxaFBsN8TfIBnaNuxAzr2_QFe0JWal6G1f1Yp_AWppBikppIKNaWxI4Y3kRCccm1vgQ9BX0tyVApuOEy_eU7aOPUmXHevq8sez07XvTALKCeNizZV8hgC1uauRzR9bTgJyDBnqAZWFZ5d79ooGDld8VE" />

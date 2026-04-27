@@ -1,5 +1,6 @@
 import HomeNavbar from "../../components/HomeNavbar";
 import HomeFooter from "../../components/HomeFooter";
+import Link from "next/link";
 
 export default function PitchHub() {
   return (
@@ -12,26 +13,26 @@ export default function PitchHub() {
       }} />
       <HomeNavbar />
       
-      <main className="max-w-7xl mx-auto pb-24">
+      <main className="max-w-7xl mx-auto pt-4 md:pt-8 pb-24">
         {/* Hero Section */}
-        <section className="px-6 pt-12 pb-16 text-center md:text-left md:flex md:items-center md:gap-12">
+        <section className="px-6 pt-8 md:pt-10 pb-16 text-center md:text-left md:flex md:items-center md:gap-12 relative z-10">
           <div className="flex-1 space-y-6">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-low text-primary font-semibold text-xs tracking-widest uppercase mb-4">
               Spring Cohort 2024
             </div>
             <h1 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface leading-[1.1]">
-              Launch Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container">Dream</span>
+              Launch Your <span className="text-primary">Dream</span>
             </h1>
             <p className="text-lg md:text-xl text-secondary max-w-xl mx-auto md:mx-0">
               Secure funding and mentorship for your next big idea. We bridge the gap between innovation and capital.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-              <button className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95">
+              <Link href="/pitch" className="h-14 min-w-[190px] px-8 bg-primary text-white font-bold rounded-full border border-primary shadow-lg shadow-primary/20 hover:bg-primary-container hover:scale-[1.02] transition-all active:scale-95 inline-flex items-center justify-center">
                 Submit Your Pitch
-              </button>
-              <button className="px-8 py-4 bg-surface-container-high text-primary font-bold rounded-full hover:bg-surface-container-highest transition-colors">
+              </Link>
+              <Link href="/events" className="h-14 min-w-[190px] px-8 bg-surface-container-high text-primary font-bold rounded-full border border-outline-variant/40 hover:bg-surface-container-highest transition-colors inline-flex items-center justify-center">
                 View Tracks
-              </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:block flex-1 relative">

@@ -16,8 +16,8 @@ export default function About() {
         `
       }} />
       <HomeNavbar />
-      <main className="pt-20">
-        <section className="relative px-8 py-24 md:py-32 max-w-7xl mx-auto overflow-hidden">
+      <main className="pt-0">
+        <section className="relative px-8 pt-10 pb-24 md:pt-14 md:pb-32 max-w-7xl mx-auto overflow-hidden">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="flex-1 space-y-8">
               <span className="label-md uppercase tracking-[0.2em] text-primary font-bold">The Precision Luminary</span>
