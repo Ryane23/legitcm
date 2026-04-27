@@ -1,230 +1,225 @@
+"use client";
+
+import { useState } from "react";
 import HomeNavbar from "../../components/HomeNavbar";
 import HomeFooter from "../../components/HomeFooter";
 
 export default function Community() {
+  const [reviewRating, setReviewRating] = useState(0);
+
   return (
-    <div className="bg-surface font-body text-on-surface flex flex-col min-h-screen">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .bg-cta-gradient {
-              background: linear-gradient(135deg, #003ec7 0%, #0052ff 100%);
-          }
-        `
-      }} />
+    <div className="bg-surface text-on-surface min-h-screen">
       <HomeNavbar />
-      
-      {/* Main Content Canvas */}
-      <main className="flex-grow pt-12 px-6 md:px-12 pb-24 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <section className="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-            <div className="max-w-2xl">
-              <span className="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary mb-3 block">Network Directory</span>
-              <h2 className="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-tight">Connect with the next generation of <span className="text-primary">innovators.</span></h2>
-              <p className="text-on-surface-variant mt-4 text-lg font-medium leading-relaxed">A curated collective of visionaries, engineers, and builders shaping the future of the ecosystem.</p>
+
+      <main className="pt-24 pb-32 max-w-7xl mx-auto px-6">
+        <section className="mb-16">
+          <div className="relative overflow-hidden rounded-3xl bg-primary min-h-[320px] flex flex-col justify-center p-8 md:p-16">
+            <div className="absolute inset-0 opacity-20 pointer-events-none">
+              <img
+                alt="Pattern"
+                className="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKuLHdfpS69lJnDT8YOTBZov631lRjbkO0qFDd4wqfWRM8t9fFr1RtEjhm8e8D3_clJE4rRrRt_sabmzYgYO4CiMeHi8w17SUlf-PdMzGHDXyPBvM_w4dpWhAL2t_7LiDiRTnigDjPYZv_s7oDk8e_E7pWoaHdkgkrOVcZB5dyU2ORf2qD5pLTu-t0fXZZEkZcsgiZvg0qlQ3Ww5tT-xB99ZI73tRMmpHMirjeLVZDJlMHOxBvU8XYzfP5DqkrMJAj4ZXwV0HcStw"
+              />
             </div>
-            <div className="flex gap-3">
-              <button className="px-6 py-3 bg-cta-gradient text-white font-bold rounded-full text-sm shadow-lg hover:scale-105 transition-transform">
-                Invite Founder
-              </button>
+            <div className="relative z-10 max-w-2xl">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">Ecosystem Hub</h1>
+              <p className="text-primary-fixed-dim text-lg md:text-xl font-medium leading-relaxed">
+                Stay updated with the pulse of our growing network. Connect with visionaries, share insights, and build the future of Nile together.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+          <section className="lg:col-span-8 space-y-6">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-bold tracking-tight">Ecosystem Pulse</h2>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary px-3 py-1 bg-surface-container-high rounded-full">Live Updates</span>
+            </div>
+            <div className="bg-surface-container-low rounded-3xl p-6 space-y-4">
+              <div className="bg-surface-container-lowest p-5 rounded-2xl flex items-start gap-4 transition-all hover:scale-[1.01] cursor-pointer group">
+                <div className="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-primary">person_add</span>
+                </div>
+                <div className="flex-grow">
+                  <div className="flex justify-between items-start">
+                    <h3 className="font-bold text-on-surface group-hover:text-primary transition-colors">New Founder joined</h3>
+                    <span className="text-[10px] font-bold text-primary px-2 py-0.5 bg-primary-fixed rounded-md uppercase">New</span>
+                  </div>
+                  <p className="text-sm text-secondary mt-1">Elena Vance from Spark AI just entered the ecosystem. Connect now!</p>
+                </div>
+              </div>
+              <div className="bg-surface-container-lowest p-5 rounded-2xl flex items-start gap-4 transition-all hover:scale-[1.01] cursor-pointer group">
+                <div className="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-tertiary">campaign</span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-bold text-on-surface group-hover:text-primary transition-colors">Upcoming Workshop announced</h3>
+                  <p className="text-sm text-secondary mt-1">Join our session on "Scaling Global Logistics" this Thursday at 4 PM GMT.</p>
+                </div>
+              </div>
+              <div className="bg-surface-container-lowest p-5 rounded-2xl flex items-start gap-4 transition-all hover:scale-[1.01] cursor-pointer group">
+                <div className="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-primary">verified</span>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-bold text-on-surface group-hover:text-primary transition-colors">Nile Platform Update v2.4</h3>
+                  <p className="text-sm text-secondary mt-1">Enhanced analytics dashboard is now live for all Enterprise members.</p>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap gap-2 mb-10">
-            <button className="px-5 py-2 rounded-xl bg-primary text-white text-sm font-semibold">All Members</button>
-            <button className="px-5 py-2 rounded-xl bg-surface-container text-on-secondary-container text-sm font-semibold hover:bg-surface-container-high transition-colors">SaaS Builders</button>
-            <button className="px-5 py-2 rounded-xl bg-surface-container text-on-secondary-container text-sm font-semibold hover:bg-surface-container-high transition-colors">Fintech</button>
-            <button className="px-5 py-2 rounded-xl bg-surface-container text-on-secondary-container text-sm font-semibold hover:bg-surface-container-high transition-colors">AI Research</button>
-            <button className="px-5 py-2 rounded-xl bg-surface-container text-on-secondary-container text-sm font-semibold hover:bg-surface-container-high transition-colors">Hardware</button>
-          </div>
-
-          {/* Founder Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {/* Founder Card 1 */}
-            <div className="group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-md">
-                  <img alt="Marcus Chen" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASinW5_ZERWGMDYwQNmdw1TtD7m2fwRBbABGp8ANR2Os7EJcpyO3SBD4rcdYxUMQIaI8zHd3lRKF4enRa4dmjXwURFLjORCSLmZONpwG5tW6M_XcP4hMTq6XhALck3n-UbBilUJ2n8owqvA3xj4cplBvFrMTZh5EdZv-LZ4NusKvoDQEarzWGZMtkQfOiRKAchDJTb6kfy2D9TIrDRiZxY24XpP6X1lbWx9Vh04NJhn3ttQ3E-tcBAAIkrJivIu6gozhsXBCSxwJQ" />
+          <section className="lg:col-span-4 space-y-6">
+            <h2 className="text-2xl font-bold tracking-tight">Connect</h2>
+            <div className="space-y-4">
+              <div className="bg-surface-container-lowest rounded-3xl p-6 border border-outline-variant/15 flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#25D366]/10 flex items-center justify-center">
+                  <img alt="WhatsApp" className="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmEVFYBvA0WReL2R9CPfMm67gsXk9PlFsO_2hs1tDHTQx2H0ekR2dFgXIsf0MxPiXbf1j-FzEeUN3XR1kwczUaOv3qWz1q_Tp4cW1NEDcnv0xZXfVliTchmrBky0TJBl2lIv86_dHrtaECiBvQGa22PXIb7e_0_8qYrrHlP0-L0_ms7QArfrPI_wQvH8NjvRd5hZBkmvCQziZoxJyb7xSXgjToJL5aXY-wNoSdeJNE8jW9KkpgL5ELlXMzRC-soQDMYKf7YNIbuC0" />
                 </div>
-                <div className="flex -space-x-2">
-                  <span className="material-symbols-outlined text-primary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                <div>
+                  <h3 className="font-bold text-lg">WhatsApp Channel</h3>
+                  <p className="text-sm text-secondary mb-4">Instant alerts and private community chats.</p>
                 </div>
+                <button className="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary-container transition-all duration-300">Join Now</button>
               </div>
-              <div className="mb-4">
-                <h3 className="font-headline text-lg font-extrabold text-on-surface">Marcus Chen</h3>
-                <p className="text-primary text-sm font-semibold mb-2">CEO at FluxAI</p>
-                <p className="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Building autonomous supply chain infrastructure for global logistics teams.</p>
-              </div>
-              <div className="mt-auto pt-6 border-t border-surface-container-low flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] font-bold uppercase tracking-wider">Series A</span>
-                  <span className="px-2 py-1 bg-surface-container text-outline text-[10px] font-bold uppercase tracking-wider">San Francisco</span>
+              <div className="bg-surface-container-lowest rounded-3xl p-6 border border-outline-variant/15 flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#1877F2]/10 flex items-center justify-center">
+                  <img alt="Facebook" className="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKQzJ5sigaevgyXg-ymyCrP1maOHghc1MQctedApDl2aeCQgCSmyPsvQTpCMmO7GKVd10OCmmiKPJ8M8Ljvl7NIdmk5XZt6uPoaTftzd_Zdt51rLygmzNuuO0ShKXmXBbJYkaqW66Jyw3PetnPHZGCzTSgeBRy8EXft6lAdr2PUOaPl6sgtvMPkwY81gSbf8spUAonoVxJ9QDnEw4YSv_3_GABzfA0iy2WOttPka4OrYhy2NVNEDsYCNA8PajnxfYc4MrrYXgJBhs" />
                 </div>
-                <button className="text-primary hover:underline font-bold text-xs uppercase tracking-widest">Connect</button>
+                <div>
+                  <h3 className="font-bold text-lg">Facebook Group</h3>
+                  <p className="text-sm text-secondary mb-4">Long-form discussions and event galleries.</p>
+                </div>
+                <button className="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary-container transition-all duration-300">Join Now</button>
               </div>
             </div>
-
-            {/* Founder Card 2 */}
-            <div className="group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-md">
-                  <img alt="Elena Rodriguez" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAltVHFDhFeSMlIvmtlrZFY4PhI7Nn9HDo4ErIHmsyVJuirREDtS59Npy1YDx9Fgj1kKPCMSPTZAz1rHel_HKbruIDN8KWu8KftPeQljOyjP9BTgd4g07-5t8-ep9GxuSQ74wJOzH45zG-hK6Z67iJoyOVKZ0zI33BgppW2zorYZaPPgFcBej-muqOPKAAU98yI6LPgJfYscY0u907CMfIlG0WLcpZHF266t_unoKQwnvjk74CyUIZq1Os15hV6PVz7F24hDpgHIM" />
-                </div>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-headline text-lg font-extrabold text-on-surface">Elena Rodriguez</h3>
-                <p className="text-primary text-sm font-semibold mb-2">Founder of Verity</p>
-                <p className="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Decentralized authentication protocols for secure digital identities.</p>
-              </div>
-              <div className="mt-auto pt-6 border-t border-surface-container-low flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] font-bold uppercase tracking-wider">Seed</span>
-                  <span className="px-2 py-1 bg-surface-container text-outline text-[10px] font-bold uppercase tracking-wider">Madrid</span>
-                </div>
-                <button className="text-primary hover:underline font-bold text-xs uppercase tracking-widest">Connect</button>
-              </div>
-            </div>
-
-            {/* Founder Card 3 */}
-            <div className="group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-md">
-                  <img alt="Julian Vane" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFL6BUcl4N7O9N7slpwCUKRQaPdYAIG83ombbHTHhmnOon-e09FrTnsLS2Sa0uh0aGrZWc-dMs7inagf8ZjK4c_yWMfAJLusfx3BaltYwuj1qZG1ScM2OeThSMjg0725VWo8-4iiaTW-evjrxfGgrRPNRgquY7wiv58REFmm1ISecwS_GJA7gMdRRVLy9L_7kU3c7eszho9xO9_mdd0eru_iKyHSqZYxgB1RGne4mXt9SCnM1zvemjLXD4JWaOSQRjwIOHp6n9iA" />
-                </div>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-headline text-lg font-extrabold text-on-surface">Julian Vane</h3>
-                <p className="text-primary text-sm font-semibold mb-2">CTO at Orbit</p>
-                <p className="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Low-latency data synchronization for real-time collaborative applications.</p>
-              </div>
-              <div className="mt-auto pt-6 border-t border-surface-container-low flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] font-bold uppercase tracking-wider">Stealth</span>
-                  <span className="px-2 py-1 bg-surface-container text-outline text-[10px] font-bold uppercase tracking-wider">Berlin</span>
-                </div>
-                <button className="text-primary hover:underline font-bold text-xs uppercase tracking-widest">Connect</button>
-              </div>
-            </div>
-
-            {/* Founder Card 4 */}
-            <div className="group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-md">
-                  <img alt="Sarah Jenkins" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEJSZyFpmEUssW0gmFHjz_qVBzw67BO01FvfGR4sKbpDjboAMEAlIgf7x8PSavTdYgu-wJxlOEelZaawA9X_WvWeHW1TDi8otBSWvJvUTppxsAyByAv4tut6deLSVC7Hj67w2sayGrLv_NH1C-tG67GYYv1M4T4VgC72J_VL0sOISF_btj1lCupSjRYDynTrN6YmlNYMpp2QjEhmT9PuCPN8t0ph3u2W9b6RYAi5MIkODxAmSjCS-2e3T5hLvqle2B2mr6TAelYM" />
-                </div>
-                <span className="material-symbols-outlined text-primary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-headline text-lg font-extrabold text-on-surface">Sarah Jenkins</h3>
-                <p className="text-primary text-sm font-semibold mb-2">Partner at Elevate</p>
-                <p className="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Early-stage venture builder focused on climate-tech and sustainable energy.</p>
-              </div>
-              <div className="mt-auto pt-6 border-t border-surface-container-low flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] font-bold uppercase tracking-wider">VC</span>
-                  <span className="px-2 py-1 bg-surface-container text-outline text-[10px] font-bold uppercase tracking-wider">London</span>
-                </div>
-                <button className="text-primary hover:underline font-bold text-xs uppercase tracking-widest">Connect</button>
-              </div>
-            </div>
-
-            {/* Founder Card 5 (Wide) */}
-            <div className="md:col-span-2 group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.01] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col sm:flex-row gap-6">
-              <div className="h-40 w-40 rounded-2xl overflow-hidden flex-shrink-0">
-                <img alt="David Kalu" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY7x_g7XUKb00Buiy4fTt6zFkXRtGbUXrcBNPzQdRvmfUAqKoc351p_Hhqj_2dq3QNSfweYLCr1KVEWcXFjdU5NF7Ox-VRVJTJBEPAY-at2F26jKVrVgPdsq30ZOiNArr2x9idvu9QX9t2_5bBK43wNxQtvdNs2wty2Or9TcNXPZxpvR_sbSMonFsMND6joqYoDhxEO0ABA5EaXdCCWDSlwdYw5ZlWchJFfYERqQx6durz4n1JMnXxRwh8EcEWNXW41KrhB6UHpak" />
-              </div>
-              <div className="flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-headline text-xl font-extrabold text-on-surface">David Kalu</h3>
-                  <span className="px-3 py-1 bg-tertiary/10 text-tertiary text-[10px] font-bold uppercase tracking-widest rounded-full">Top Contributor</span>
-                </div>
-                <p className="text-primary text-sm font-semibold mb-3">Product Lead at Nile</p>
-                <p className="text-on-surface-variant text-sm mb-4 leading-relaxed">Designing the future of collaborative entrepreneurship. Focused on building tools that empower African founders to reach global markets.</p>
-                <div className="mt-auto flex items-center justify-between">
-                  <div className="flex gap-4">
-                    <div className="flex items-center gap-1 text-outline">
-                      <span className="material-symbols-outlined text-sm">chat_bubble</span>
-                      <span className="text-xs font-bold">42 Posts</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-outline">
-                      <span className="material-symbols-outlined text-sm">thumb_up</span>
-                      <span className="text-xs font-bold">1.2k Likes</span>
-                    </div>
-                  </div>
-                  <button className="px-6 py-2 bg-surface-container-high text-primary font-bold rounded-full text-xs hover:bg-primary hover:text-white transition-all">View Full Profile</button>
-                </div>
-              </div>
-            </div>
-
-            {/* Founder Card 6 */}
-            <div className="group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-md">
-                  <img alt="Amara Okafor" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKLbjOxsqm5lI6ImkKzKyWPg-E5KLpiBl4BYcd5xBwazsqw6iFBdL9H8Ds9nhu_t4LhGCx9EJWekuA62QF8Vd79nMsuKr0Ba9UBIp0-cIw47kQ9LS0JsD2J4famVVKorwlIFifrFB5gynjZgHykQS5fto1rN_cPGnm_uEx7UQ-g7nl4educv6aqceEHBmv76oP583ineNY1OET-42MIfPwQeVqsDiVyHOEskVZ12l_SUcLV6IlTFe6oBWnNV2j9o5CH88CffX9qCo" />
-                </div>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-headline text-lg font-extrabold text-on-surface">Amara Okafor</h3>
-                <p className="text-primary text-sm font-semibold mb-2">CEO at GreenGrid</p>
-                <p className="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Sustainable energy management for smart cities across Sub-Saharan Africa.</p>
-              </div>
-              <div className="mt-auto pt-6 border-t border-surface-container-low flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] font-bold uppercase tracking-wider">Series B</span>
-                  <span className="px-2 py-1 bg-surface-container text-outline text-[10px] font-bold uppercase tracking-wider">Lagos</span>
-                </div>
-                <button className="text-primary hover:underline font-bold text-xs uppercase tracking-widest">Connect</button>
-              </div>
-            </div>
-
-            {/* Founder Card 7 */}
-            <div className="group bg-surface-container-lowest p-6 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_40px_rgb(19,27,46,0.02)] flex flex-col">
-              <div className="flex justify-between items-start mb-6">
-                <div className="h-16 w-16 rounded-2xl overflow-hidden shadow-md">
-                  <img alt="Kenji Yamamoto" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQkQM1vbmr8nF3IVQ3zohren7L4lqUoVSAgfJ_ULy3vLpcRxXADD1ptubb6h5FEDH5E89XC83McW67XKJWZ4qEiH0RejybzkCQrI7LVkeF4IpzSwT0n4-GrlcAiO8jaTKcucoLRQFO3q_pqwMj55weeUPImYMyZMqWJkGq_nNobdMvvraUp9yK51tSi672DuDMYlb5P4wFBQbJd28BmW3a58gwhPPWHqiTOZE9IpZ_afubC7L7xv1yXcxVmkQeHLc4ULAZthczM6o" />
-                </div>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-headline text-lg font-extrabold text-on-surface">Kenji Yamamoto</h3>
-                <p className="text-primary text-sm font-semibold mb-2">Founder of Kyber</p>
-                <p className="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">High-performance rust-based frameworks for web3 gaming infrastructure.</p>
-              </div>
-              <div className="mt-auto pt-6 border-t border-surface-container-low flex items-center justify-between">
-                <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] font-bold uppercase tracking-wider">Seed</span>
-                  <span className="px-2 py-1 bg-surface-container text-outline text-[10px] font-bold uppercase tracking-wider">Tokyo</span>
-                </div>
-                <button className="text-primary hover:underline font-bold text-xs uppercase tracking-widest">Connect</button>
-              </div>
-            </div>
-          </div>
-
-          {/* Pagination Section */}
-          <div className="mt-16 flex justify-center items-center gap-4">
-            <button className="p-3 rounded-full bg-surface-container text-outline hover:bg-surface-container-high transition-all">
-              <span className="material-symbols-outlined">chevron_left</span>
-            </button>
-            <div className="flex gap-2">
-              <button className="w-10 h-10 rounded-full bg-primary text-white font-bold text-sm">1</button>
-              <button className="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-all">2</button>
-              <button className="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-all">3</button>
-              <span className="w-10 h-10 flex items-center justify-center text-outline">...</span>
-              <button className="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-all">12</button>
-            </div>
-            <button className="p-3 rounded-full bg-surface-container text-outline hover:bg-surface-container-high transition-all">
-              <span className="material-symbols-outlined">chevron_right</span>
-            </button>
-          </div>
+          </section>
         </div>
+
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold tracking-tight">Founders Directory</h2>
+            <button className="text-primary font-bold flex items-center gap-1 group">
+              View Full Directory
+              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="group bg-surface-container-lowest rounded-3xl p-6 transition-all hover:shadow-[0_20px_50px_rgba(19,27,46,0.08)]">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img alt="Founder" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi0I8P75ZV6JP9xMpbkE2BohRw4bdEYO8iyMsKrsqRi4n75wXy1sDvtSW7539TP5NA52vTzSOVeshgZEGdod6Haig3YRiW3ZBUPnrTnSAPG94HH2ZxdZL4685GxUFGB7KJ8VnPbV95CVL0hLkuMYe9Hg25JfKZR240qJYZpkrQdd9xkq1v3EWn4xcSf2Al0ZgSkRKSa4Sk-YjTi-M4HO03j3jn7zUhfkJGCca3FZtfZ0bKxvbxjxD4xvaCkK2CycFo1fsRadmgIDk" />
+              </div>
+              <h3 className="font-bold text-lg mb-1">Marcus Thorne</h3>
+              <p className="text-sm text-primary font-semibold mb-3">CEO, Apex Systems</p>
+              <div className="flex gap-2">
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Tech</span>
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Series B</span>
+              </div>
+            </div>
+            <div className="group bg-surface-container-lowest rounded-3xl p-6 transition-all hover:shadow-[0_20px_50px_rgba(19,27,46,0.08)]">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img alt="Founder" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVj7WyLHByO6eohC6AxfiX84WkRmE_cedqoE0CmTn0RoftAqqTjlAQkK3Luwf-_YTbD8Rw-0kWs6ht1QHQ15Gwy-3f25BV18NM2FePR-O8xABjHplXK2sSX0hTjzOKkY7oME02IJz4IuLU1WiQ9smrZrb1lchOQO7TIs_jLtXe-sjQ-PcjupKsV9hvzqjIqBMFckb8X1v2RAEVVhfiGeVYTmrcLaWCvxELf7UKG-Oi9uqglUZlvDFzrj9uXwNU_GgJA-_Vv4I220" />
+              </div>
+              <h3 className="font-bold text-lg mb-1">Amara Okafor</h3>
+              <p className="text-sm text-primary font-semibold mb-3">Founder, GreenRoot</p>
+              <div className="flex gap-2">
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Agri-tech</span>
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Impact</span>
+              </div>
+            </div>
+            <div className="group bg-surface-container-lowest rounded-3xl p-6 transition-all hover:shadow-[0_20px_50px_rgba(19,27,46,0.08)]">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img alt="Founder" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQADh0DzU8uFVgkxD4bDmi_rUecZSiZ17qdE8fRJxBQNCQZWOb7ZhUCsUaRk__EIKR7IgIWD2EwZ7p8NbXYQ0DWx6AkSrrZawaHsQ2wZ001hrqDT2E4IOGu8cbZFMqeNFiQEmEUXky9eDQRVMasfUpen32z-WvWcG0brUuC03o-NKJ13ewrmgDeFCpCUMfLqxxOPMC4hLdacwJp-YE43tmhGy6vDv6cekRA0on4Ll8p29wUsHZ3eAjJuntbtBK8oETa9Oj18XWF_Q" />
+              </div>
+              <h3 className="font-bold text-lg mb-1">Julian Harth</h3>
+              <p className="text-sm text-primary font-semibold mb-3">CTO, Veloci-Pay</p>
+              <div className="flex gap-2">
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Fintech</span>
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Security</span>
+              </div>
+            </div>
+            <div className="group bg-surface-container-lowest rounded-3xl p-6 transition-all hover:shadow-[0_20px_50px_rgba(19,27,46,0.08)]">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img alt="Founder" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM7ZzPG6A1t5tlYbF_tV5qnZru_4DDN66Sl-uq0nO76xFEkDTJBr5yS4ekb7tXD0nYueeSVKyzCzfolb66ZvtYv57J0mD9lVIJnjUhGS2TU33QvnLXHxQNkn36hr-N79FE-bOneiAOqdvq1Yn4-Mhy1xwgullqB84YCfSkZf36aWY65Ju3VO2eYmbgf5vyGxKnRFwz5EPR0OaCmTGYorqOCbERmqv3Dg-LsgeFx4Q8J0fhtRjNujY5BvNG2N9VEXdgOWKz-h9HTq0" />
+              </div>
+              <h3 className="font-bold text-lg mb-1">Sarah Chen</h3>
+              <p className="text-sm text-primary font-semibold mb-3">CPO, Urban Flow</p>
+              <div className="flex gap-2">
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Design</span>
+                <span className="bg-surface-container-low text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Growth</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-surface-container rounded-[2.5rem] p-8 md:p-12 mb-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-12 opacity-10">
+            <span className="material-symbols-outlined text-[120px] text-primary">rate_review</span>
+          </div>
+          <div className="max-w-3xl relative z-10">
+            <h2 className="text-3xl font-bold tracking-tight mb-8">Ecosystem Voice</h2>
+            <div className="space-y-6 mb-12">
+              <div className="bg-white/60 backdrop-blur-md p-6 rounded-3xl">
+                <div className="flex items-center gap-1 mb-3">
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                </div>
+                <p className="text-on-surface font-medium mb-3 italic">
+                  "The Nile platform has completely streamlined how our startup handles regional logistics. The community aspect is the cherry on top."
+                </p>
+                <p className="text-xs font-bold text-primary">— David L., Founder of SwiftShip</p>
+              </div>
+              <div className="bg-white/60 backdrop-blur-md p-6 rounded-3xl">
+                <div className="flex items-center gap-1 mb-3">
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-500 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-slate-300 text-sm">star</span>
+                </div>
+                <p className="text-on-surface font-medium mb-3 italic">
+                  "Incredible interface. I've found three new strategic partners through the directory in just one month."
+                </p>
+                <p className="text-xs font-bold text-primary">— Maria K., VP of Growth</p>
+              </div>
+            </div>
+            <div className="bg-surface-container-lowest p-8 rounded-[2rem] shadow-xl shadow-primary/5">
+              <h3 className="text-xl font-bold mb-6">Write a Review</h3>
+              <div className="space-y-4">
+                <div className="flex gap-2 mb-4" role="radiogroup" aria-label="Rate the ecosystem">
+                  {[1, 2, 3, 4, 5].map((value) => (
+                    <button
+                      key={value}
+                      type="button"
+                      className={`material-symbols-outlined cursor-pointer transition-colors ${
+                        reviewRating >= value ? "text-primary" : "text-primary-container"
+                      }`}
+                      style={{ fontVariationSettings: reviewRating >= value ? "'FILL' 1" : "'FILL' 0" }}
+                      aria-checked={reviewRating === value}
+                      aria-label={`${value} star${value > 1 ? "s" : ""}`}
+                      role="radio"
+                      onClick={() => setReviewRating(value)}
+                      onMouseEnter={() => setReviewRating(value)}
+                    >
+                      star
+                    </button>
+                  ))}
+                </div>
+                <textarea className="w-full bg-surface-container-low border-none rounded-2xl p-4 text-sm focus:ring-2 focus:ring-primary h-32 placeholder:text-outline-variant" placeholder="Share your experience with the ecosystem..." />
+                <button className="bg-primary text-white font-bold py-4 px-8 rounded-full w-full md:w-auto shadow-lg shadow-blue-500/20 active:scale-95 transition-all">
+                  Submit Review
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <HomeFooter />
-
-      {/* Floating Action Button */}
-      <button className="fixed bottom-8 right-8 h-14 w-14 bg-cta-gradient text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50">
-        <span className="material-symbols-outlined text-2xl">chat</span>
-      </button>
     </div>
   );
 }
