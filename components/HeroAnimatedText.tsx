@@ -57,16 +57,16 @@ export default function HeroAnimatedText() {
         Legit is the premier ecosystem for African innovators. We provide the mentorship, capital, and community you need to turn your ambitious vision into a world-class startup.
       </p>
 
-      <div ref={buttonsRef} className="flex flex-nowrap gap-4 justify-center lg:justify-start items-stretch">
+      <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
         <Link
           href="/events"
-          className="min-w-[170px] h-14 px-8 hero-gradient text-white rounded-full font-bold shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform inline-flex items-center justify-center"
+          className="w-[220px] h-14 px-8 hero-gradient text-white rounded-full font-bold shadow-lg shadow-blue-500/20 transition-colors inline-flex items-center justify-center"
         >
           Join Event
         </Link>
         <Link
           href="/pitch"
-          className="min-w-[170px] h-14 px-8 bg-surface-container-high text-primary rounded-full font-bold hover:bg-surface-container-highest transition-colors inline-flex items-center justify-center"
+          className="w-[220px] h-14 px-8 bg-surface-container-high text-primary rounded-full font-bold hover:bg-surface-container-highest transition-colors inline-flex items-center justify-center"
         >
           Apply to Pitch
         </Link>
